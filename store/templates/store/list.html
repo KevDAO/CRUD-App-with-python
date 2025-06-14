@@ -1,0 +1,12 @@
+<h2>Products</h2>
+<ul>
+  {% for product in products %}
+    <li>
+      {{ product.name }} - ${{ product.price }}
+      <a href="/edit/{{ product.id }}/">Edit</a> |
+      <a href="/delete/{{ product.id }}/" onclick="return confirm('Are you sure?');">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="/add/">Add Product</a>
+
